@@ -1,0 +1,56 @@
+# username and email.
+
+[user]
+    name = Benjamin Gudehus
+    email = hastebrot@gmail.com
+
+# git command aliases.
+
+[alias]
+    # pretty log.
+    lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+    # status.
+    b = branch
+    st = status
+    uno = status -uno
+    head = !git lg -1
+    h = !git head
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+
+    # actions.
+    aa = add --all
+    ci = commit
+    co = checkout
+    cip = commit --patch
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+
+    # more actions.
+    ff = merge --ff-only
+    pl = pull --ff-only
+    pullff = pull --ff-only
+    noff = merge --no-ff
+    fa = fetch --all
+
+    # fetch, merge, or push master branch.
+    fom = fetch origin master
+    mom = merge master origin/master
+    pom = push origin master
+    fopm = fetch parent master
+    mopm = merge master parent/master
+    popm = push parent master
+
+    # stash and reset.
+    ww = log --grep="(wip)" --format=email
+    wip = commit -am "(wip)"
+    unwip = reset HEAD~1
+    failsafe = branch failsafe
+
+# git push config.
+
+[push]
+    default = simple
+
