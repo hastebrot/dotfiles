@@ -138,7 +138,8 @@ nnoremap <silent> <C-f> :set hlsearch!<CR>
 " leader key.
 "--------------------------------------
 
-let mapleader = "\<Space>"
+set notimeout
+"let mapleader = "\<Space>"
 nmap <Space> <Leader>
 
 nmap <Leader>wh <C-w><C-s>
@@ -150,7 +151,7 @@ nmap <Leader>o :CtrlP<CR>
 nmap <Leader>s :w<CR>
 
 nmap <Leader><Space> <C-w><C-w>
-"nmap <Leader><Leader> <C-w><C-w>
+nmap <Leader><Leader> <C-w><C-w>
 
 "--------------------------------------
 " auto completion.
