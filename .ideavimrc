@@ -1,0 +1,5 @@
+source ~/.vimrc
+
+'map <silent> <S-Tab> :previous<CR>
+'map <silent> <Tab> :next<CR>
+map <silent> <Tab> :action NextTab<CR>
