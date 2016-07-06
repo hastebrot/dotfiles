@@ -41,10 +41,11 @@ set path+=**
 
 syntax on
 "colorscheme jellybeans
-colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night
+colorscheme monokai
 
 " highlight current line.
-set cursorline
+"set cursorline
 "hi CursorLine term=none cterm=none ctermbg=8
 
 "--------------------------------------
@@ -61,8 +62,8 @@ nnoremap <silent> <C-d> :set list!<CR>
 
 map <silent> <F2> :bprevious<CR>
 map <silent> <F3> :bnext<CR>
-map <silent> <S-Tab> :previous<CR>
-map <silent> <Tab> :next<CR>
+map <silent> <S-Tab> :bprevious<CR>
+map <silent> <Tab> :bnext<CR>
 
 "--------------------------------------
 " split windows.
@@ -101,17 +102,21 @@ nnoremap zk O<Esc>j
 "nnoremap oo o<Esc>k
 "nnoremap OO O<Esc>j
 
-" jump to eol (german keyboard).
-nnoremap = $
-vnoremap = $
-nnoremap ß $
-vnoremap ß $
+" jump to sol or eol (german keyboard).
+nnoremap q ^
+vnoremap q ^
+nnoremap ü $
+vnoremap ü $
 
 " jump to empty lines (german keyboard).
 nnoremap ö }
 nnoremap Ö {
 vnoremap ö }
 vnoremap Ö {
+nnoremap , }
+nnoremap ; {
+vnoremap , }
+vnoremap ; {
 
 " brackets.
 nnoremap gb %
@@ -148,7 +153,7 @@ nmap <Leader>ww <C-w><C-w>
 nmap <Leader>wc :close<CR>
 
 nmap <Leader>o :CtrlP<CR>
-nmap <Leader>s :w<CR>
+nmap <Leader>O :w<CR>
 
 nmap <Leader><Space> <C-w><C-w>
 nmap <Leader><Leader> <C-w><C-w>
@@ -182,7 +187,8 @@ autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " airline (lightweight statusbar utility).
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'bubblegum'
+"let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'distinguished'
 
 autocmd FileType * unlet! g:airline#extensions#whitespace#checks
 autocmd FileType markdown let g:airline#extensions#whitespace#checks = ['indent']
@@ -195,7 +201,10 @@ map <silent> <A-2> :TagbarToggle<CR>
 nnoremap <C-p> :CtrlP<CR>
 nnoremap <A-p> :CtrlPBuffer<CR>
 
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>m :CtrlPMRUFiles<CR>
-nnoremap <leader>t :CtrlPTag<CR>
+"nnoremap <leader>f :CtrlP<CR>
+"nnoremap <leader>b :CtrlPBuffer<CR>
+"nnoremap <leader>m :CtrlPMRUFiles<CR>
+"nnoremap <leader>t :CtrlPTag<CR>
+
+" vim-easymotion
+map <leader> <plug>(easymotion-prefix)
