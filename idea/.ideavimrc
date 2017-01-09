@@ -1,5 +1,9 @@
 source ~/.vimrc
+'set surround
 
 'map <silent> <S-Tab> :previous<CR>
 'map <silent> <Tab> :next<CR>
 map <silent> <Tab> :action NextTab<CR>
+map <silent> <Leader>x :action Run<CR>
+map <silent> <Leader><S-x> :action RunMenu<CR>
+map <silent> gh :action ParameterInfo<CR>
