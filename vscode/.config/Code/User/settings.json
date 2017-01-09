@@ -1,0 +1,68 @@
+
+{
+  "editor.wordWrap": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "editor.fontFamily": "Roboto Mono for Powerline",
+  "editor.fontSize": 15,
+  "editor.tabCompletion": true,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "editor.renderIndentGuides": true,
+  "editor.codeLens": true,
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+  "terminal.integrated.fontSize": 15,
+  "python.pythonPath": "python3",
+  "rust.rustLangSrcPath": "/home/bg/Downloads/rust/rustc-nightly/src",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "update.channel": "none",
+  "extensions.autoUpdate": false,
+  "terminal.integrated.shell.linux": "/usr/bin/fish",
+  "typescript.check.tscVersion": false,
+  "workbench.sideBar.location": "right",
+  "editor.lineNumbers": "relative",
+  "elm.formatOnSave": true,
+  "vim.leader": " ",
+  "vim.easymotion": true,
+  "vim.otherModesKeyBindingsNonRecursive": [
+    { "before": [ "," ], "after": [ "}" ] },
+    { "before": [ ";" ], "after": [ "{" ] },
+    { "before": [ "q" ], "after": [ "$" ] },
+    { "before": [ "Q" ], "after": [ "^" ] },
+    {
+      "before": [ "<space>", "o" ], "after": [ "<esc>" ],
+      "commands": [ { "command": "workbench.action.quickOpen", "args": [] } ]
+    },
+    {
+      "before": [ "<space>", "x" ], "after": [ "<esc>" ],
+      "commands": [ { "command": "code-runner.run", "args": [] } ]
+    },
+    {
+      "before": [ "<space>", "c" ], "after": [ "<esc>" ],
+      "commands": [ { "command": "code-runner.stop", "args": [] } ]
+    }
+  ],
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.showExecutionMessage": true,
+  "code-runner.enableAppInsights": false,
+  "code-runner.executorMap": {
+    "python": "python3"
+  },
+  "vim.useSolidBlockCursor": true,
+  "editor.cursorStyle": "block",
+"editor.cursorBlinking": "solid",
+  "editor.mouseWheelZoom": true,
+  "python.linting.enabled": false,
+"workbench.activityBar.visible": false,
+"workbench.statusBar.visible": true,
+  "explorer.autoReveal": false,
+  "tslint.enable": false,
+  "tslint.run": "onType",
+"window.zoomLevel": 0,
+  "files.hotExit": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "vim.useCtrlKeys": false,
+  "gitlens.codeLens.authors.enabled": true
+}
