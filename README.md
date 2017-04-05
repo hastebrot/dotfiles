@@ -18,6 +18,7 @@ Symlink files within a `PACKAGE` into `~` (the user home directory).
 
 ~~~
 $ stow --target=~ [PACKAGE]
+$ stow -t ~/ vim
 ~~~
 
 ## Packages
@@ -29,3 +30,51 @@ $ stow --target=~ [PACKAGE]
 - `tmux`
 - `vim`
 - `vscode`
+
+## Additional
+
+Nvim: Link to previous vim configuration.
+
+~~~
+$ mkdir -p ~/.config
+$ ln -s ~/.vim ~/.config/nvim
+$ ln -s ~/.vimrc ~/.config/nvim/init.vim
+~~~
+
+via: https://github.com/neovim/neovim/blob/v0.1.1/runtime/doc/nvim_from_vim.txt#L12-L18
+
+Nvim: List pathogen bundle directory:
+
+~~~
+$ ls -1 ~/.vim/bundle
+bubblegum
+ctrlp.vim
+dart-vim-plugin
+deoplete.nvim
+elm-vim
+jellybeans.vim
+kotlin-vim
+nerdtree
+paredit.vim
+rust.vim
+space-vim-dark
+supertab
+SyntaxRange
+targets.vim
+vim-airline
+vim-airline-themes
+vim-crystal
+vim-easymotion
+vim-emoji
+vim-fireplace
+vim-fugitive
+vim-gitgutter
+vim-monokai
+VimRegStyle
+vim-salve
+vim-scala
+vim-surround
+vim-tomorrow-theme
+vimwiki
+~~~
+
