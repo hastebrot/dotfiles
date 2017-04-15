@@ -2,35 +2,45 @@
 
 [user]
     name = Benjamin Gudehus
-    email = hastebrot@gmail.com
 
 # git command aliases.
 
 [alias]
-    # pretty log.
+    # email (<project>/.git/config).
+    github = config user.email \"hastebrot@gmail.com\"
+    canoo = config user.email \"benjamin.gudehus@canoo.com\"
+    email = config user.email
+
+    # log.
     lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
     l = log --oneline -20
+    head = !git lg -1
+    h = !git head
 
-    # status.
-    b = branch
-    ba = branch -avv
+    # actions.
     s = status
     st = status -s
     uno = status -uno
-    head = !git lg -1
-    h = !git head
-    ds = diff --stat=160,120
-    dh1 = diff HEAD~1
+
+    b = branch
+    ba = branch -avv
     r = remote --verbose
 
-    # actions.
     aa = add --all
     ci = commit
     co = checkout
     cip = commit --patch
+    amend = commit --amend
+
     di = diff
     dc = diff --cached
-    amend = commit --amend
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+
+    tg = tag -a 
+    pu = push --tags
+    un = reset --hard HEAD  
+    uh = reset --hard HEAD^
 
     # more actions.
     ff = merge --ff-only
